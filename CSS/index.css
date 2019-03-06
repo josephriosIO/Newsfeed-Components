@@ -37,8 +37,32 @@
 }
 .menu-button {
   position: absolute;
+  z-index: 3;
   left: 20px;
   cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-button .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.menu-button.close {
+  transform: rotate(180deg);
+}
+.menu-button.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: white;
+}
+.menu-button.close .btn-line:nth-child(2) {
+  transform: rotate(45deg) translate(5px, 5px);
+  opacity: 0;
+}
+.menu-button.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+  background: white;
 }
 .menu {
   position: fixed;
@@ -118,10 +142,9 @@
   border-radius: 10px;
   cursor: pointer;
   transform: translate(-50%);
-  background-color: #add8e6;
+  background-color: #81c784;
 }
 .article-open {
-  transform: translateY(-50);
   height: 400px;
 }
 html,

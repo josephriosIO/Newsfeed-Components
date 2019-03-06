@@ -1,7 +1,34 @@
 .menu-button {
   position: absolute;
+  z-index: 3;
   left: 20px;
   cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.menu-button.close {
+  transform: rotate(180deg);
+
+  .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: white;
+  }
+  .btn-line:nth-child(2) {
+    transform: rotate(45deg) translate(5px, 5px);
+    opacity: 0;
+  }
+  .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    background: white;
+  }
 }
 
 .menu {
